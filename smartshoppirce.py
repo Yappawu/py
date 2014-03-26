@@ -32,7 +32,7 @@ with open('smartshopprice.csv', 'rb') as csvfile:
         else:
             headers = {"User-Agent": "Agent 1.1"}
 
-            url = "http://www.amazon.com/dp/"+ asin + "/ref=sr_1_2?m=A1FPC72QTFLMID"
+            url = "http://www.amazon.com/dp/"+ asin + "/ref=sr_1_2?m=A37EX3VWRXFARG"
             try:
                 r = requests.get(url, headers = headers,timeout = 20)
             except socket.timeout:
