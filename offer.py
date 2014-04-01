@@ -36,7 +36,7 @@ for url in urls:
         except requests.exceptions.Timeout:        
             #print "Time out"
             check = 'false'
-    except requests.exceptions.connectionerror:
+    except requests.exceptions.ConnectionError:
         r.text = "error"
     soup = BeautifulSoup(r.text)
     stores = {'A37EX3VWRXFARG': 'eformart', 'A1FPC72QTFLMID': 'accmart', 'A3NY6IRPSQ8J63':'ELE','A2ZAS8KUHKF26X':'Meco',
@@ -89,7 +89,7 @@ for url in urls:
             #newrows.append[blankline]
             #print iprice,sprice
 
-    #time.sleep(5)
+    time.sleep(8)
 for i in newrows:
     print i
 with open('aisnprice.csv', 'wb') as csvfile2:
